@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ДвиженияЗабронированныеТовары" id="7">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.RegisterRecords.ЗабронированныеТовары</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДвиженияЗабронированныеТоварыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ДвиженияЗабронированныеТоварыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ДвиженияЗабронированныеТоварыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ДвиженияЗабронированныеТоварыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ДвиженияЗабронированныеТовары</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДвиженияЗабронированныеТоварыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДвиженияЗабронированныеТоварыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДвиженияЗабронированныеТоварыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ДвиженияЗабронированныеТовары</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДвиженияЗабронированныеТоварыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДвиженияЗабронированныеТоварыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДвиженияЗабронированныеТоварыУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ДвиженияЗабронированныеТовары</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДвиженияЗабронированныеТоварыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДвиженияЗабронированныеТоварыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДвиженияЗабронированныеТоварыНомерСтроки" id="20">
+					<DataPath>Объект.RegisterRecords.ЗабронированныеТовары.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДвиженияЗабронированныеТоварыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДвиженияЗабронированныеТоварыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ДвиженияЗабронированныеТоварыПериод" id="23">
+					<DataPath>Объект.RegisterRecords.ЗабронированныеТовары.Period</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДвиженияЗабронированныеТоварыПериодКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДвиженияЗабронированныеТоварыПериодРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ДвиженияЗабронированныеТоварыВидДвижения" id="26">
+					<DataPath>Объект.RegisterRecords.ЗабронированныеТовары.RecordType</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДвиженияЗабронированныеТоварыВидДвиженияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДвиженияЗабронированныеТоварыВидДвиженияРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ДвиженияЗабронированныеТоварыТовар" id="29">
+					<DataPath>Объект.RegisterRecords.ЗабронированныеТовары.Товар</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДвиженияЗабронированныеТоварыТоварКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДвиженияЗабронированныеТоварыТоварРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ДвиженияЗабронированныеТоварыКоличество" id="32">
+					<DataPath>Объект.RegisterRecords.ЗабронированныеТовары.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДвиженияЗабронированныеТоварыКоличествоКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДвиженияЗабронированныеТоварыКоличествоРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ИнтерактивноеБронирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
